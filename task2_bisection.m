@@ -1,9 +1,9 @@
 function retval = task2_bisection(input1, input2)
+  f = @(x) x.^2 - 4;
 
-   f = input('Enter your function ');
+  a = 0;
+  b = 6;
 
-  a = input('Enter left side of interval ');
-  b = input('Enter right side of interval ');
   tol = 1e-6;
 
   iterations = 0;
@@ -34,5 +34,22 @@ function retval = task2_bisection(input1, input2)
   end
   fprintf(']\n');
 
+    x = linspace(min(y_values) - 1, max(y_values) + 1, 1000);
+    y = f(x);
 
-  endfunction
+    figure;
+    plot(x, y, 'LineWidth', 2);
+    hold on;
+    scatter(y_values, zeros(size(y_values)), 50, 'r','filled');
+    xlabel('x');
+    ylabel('f(x)');
+    title('Bisection Method: Finding Roots');
+    legend('Function', 'Roots');
+    grid on;
+    hold off;
+
+    retval = root;
+endfunction
+
+
+
