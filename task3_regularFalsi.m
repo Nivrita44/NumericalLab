@@ -1,9 +1,9 @@
-  function retval = task3_regularFalsi(input1, input2)
+function retval = task3_regularFalsi(input1, input2)
   f = @(x) x.^2 - 4;
 
   a = 0;
   b = 6;
-  tol = 1e-6;
+  tol = 1e-5;
   M=[];
 
 
@@ -37,12 +37,12 @@ end
     fprintf('%f\n', y_vals(i));
   end
   fprintf(']\n');
-  x=linspace(1,2,50);
+  x=linspace(1,3,40);
   y=f(x);
   figure;
   plot (x, y, 'LineWidth',2);
   hold on;
-  scatter(M, f(M), 40, 'r', 'filled');
+  scatter(M, f(M), 40, 'k', 'filled');
   xlabel('x');
   ylabel('f(x)');
   title('False-Position Method: Finding Roots');
@@ -53,4 +53,3 @@ end
 
   retval = root;
 endfunction
-
