@@ -34,13 +34,13 @@ function retval = task2_bisection(input1, input2)
   end
   fprintf(']\n');
 
-    x = linspace(min(y_values) - 1, max(y_values) + 1, 1000);
+    x = linspace(min(y_vals) - 1, max(y_vals) + 1, 1000);
     y = f(x);
 
     figure;
     plot(x, y, 'LineWidth', 2);
     hold on;
-    scatter(y_values, zeros(size(y_values)), 50, 'r','filled');
+    scatter(y_vals, zeros(size(y_vals)), 50, 'k','filled');
     xlabel('x');
     ylabel('f(x)');
     title('Bisection Method: Finding Roots');
