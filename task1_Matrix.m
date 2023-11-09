@@ -2,7 +2,6 @@
 rA = input('Enter the number of rows for matrix A: ');
 cA = input('Enter the number of columns for matrix A: ');
 
-A = zeros(rA, cA);
 disp('Enter the values for matrix A:');
 for i = 1:rA
     for j = 1:cA
@@ -13,7 +12,6 @@ end
 rB = input('Enter the number of rows for matrix B: ');
 cB = input('Enter the number of columns for matrix B: ');
 
-B = zeros(rB, cB);
 disp('Enter the values for matrix B:');
 for i = 1:rB
     for j = 1:cB

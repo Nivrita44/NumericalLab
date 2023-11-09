@@ -1,7 +1,6 @@
-function retval = task2_bisection(input1, input2)
+function retval = test(input1, input2)
 
-   f = input('Enter your function ');
-
+  f = input('Enter your function ');
   a = input('Enter left side of interval ');
   b = input('Enter right side of interval ');
   tol = 1e-6;
